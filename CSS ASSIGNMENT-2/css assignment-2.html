@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Demo: Units of Measurement in CSS</title>
+  <style>
+    body {
+      font-size: 16px;
+    }
+
+    .box.em {
+      height: 5em;
+    }
+
+    .box.em {
+      background-color: red;
+    }
+
+    .box.rem {
+      height: 5rem;
+    }
+
+    .box.vw {
+      height: 5vw;
+    }
+
+    .box.vh {
+      height: 5vh;
+    }
+
+    .box.rem {
+      background-color: purple;
+    }
+
+    .box.vw {
+      background-color: green;
+    }
+
+    .box.vh {
+      background-color: violet;
+    }
+
+    .box.px {
+      
+      height: 5px;
+    }
+
+    .box.px {
+      background-color: black;
+    }
+    .box .px {padding-top: 5px;}
+
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+    }
+
+    li {
+      list-style-type: none;
+    }
+
+
+
+    /* First level children */
+    ul>li {
+      background-color: pink;
+      padding: 5px;
+    }
+
+    /* adjacent sibling */
+    .Sibling+p {
+      background-color: rgb(156, 194, 68);
+      margin-top: 10px;
+    }
+
+
+    .CSSCombinatorsDemo p {
+      background-color: lightgreen;
+      margin-top: 10px;
+    }
+
+    /* General sibling */
+    article~article {
+      background-color: rgb(30, 146, 164);
+      margin-top: 10px;
+    }
+
+    .transform {
+        width: 200px;
+        height: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background-color: pink;
+        margin: 50px auto;
+        position: relative;
+        transition: transform 0.5s ease-in-out;
+      }
+
+      .transform:hover {
+        transform: scale(1.2);
+      }
+  </style>
+</head>
+
+<body>
+  <h1>Units of Measurement in CSS</h1>
+  <div class="box em">
+    <p>5em height (red)</p>
+  </div>
+  <div class="box rem">
+    <p>5rem height (purple)</p>
+  </div>
+  <div class="box vw">
+    <p>5vw height (green)</p>
+  </div>
+  <div class="box vh">
+    <p>5vh height (violet)</p>
+  </div>
+  <div class="box px">
+    <p>5px height (blue)</p>
+  </div>
+
+  <h1>CSS Combinators Demo</h1>
+  <h1>Child selector</h1>
+  <ul>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+    <li>Item 4</li>
+    <li>Item 5</li>
+    <li>Item 6</li>
+  </ul>
+
+  <h1> adjacent Sibling selector</h1>
+  <div class="Sibling">
+    <p>not a sibling</p>
+  </div>
+  <p>a sibling</p>
+  <div class="Sibling">
+    <p>not a sibling</p>
+  </div>
+  <p>a sibling</p>
+  <div class="Sibling">
+    <p>not a sibling</p>
+  </div>
+  <p>a sibling</p>
+
+  <h1>Descendant selector</h1>
+  <div class="CSSCombinatorsDemo">
+    <p>Descendant selector</p>
+    <p>Descendant selector</p>
+    <p>Descendant selector</p>
+  </div>
+  <p>outside div</p>
+  <h1>General Sibling selector</h1>
+  <span>
+    <article>1st sibling</article>
+    <article>2nd sibling</article>
+    <span>article</span>
+    <article>3rd sibling</article>
+  </span>
+  <h1>Transform and transition</h1>
+  <div class="transform">hello</div>
+</body>
+
+</html>
